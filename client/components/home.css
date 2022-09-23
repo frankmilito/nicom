@@ -9,7 +9,8 @@
 .header {
   background-image: url("../assets/background.jpg");
   background-position: 50%;
-  background-size: color;
+  background-size: cover;
+  object-fit: cover;
   background-repeat: no-repeat;
   height: 50vh;
   width: 100%;
@@ -40,7 +41,7 @@
 }
 .container .products {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 2em;
 }
 .container .products h3 {
@@ -86,10 +87,17 @@
   margin-left: 5px;
 }
 
-@media screen and (max-width:768px){
+@media screen and (min-width:768px){
   .container .products {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr)!important;
+  gap: 2em;
+}
+}
+@media screen and (min-width:368px){
+  .container .products {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) !important;
   gap: 2em;
 }
 }
