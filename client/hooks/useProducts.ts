@@ -1,6 +1,6 @@
-import {gql, useQuery} from '@apollo/client'
+import { gql, useQuery } from '@apollo/client'
 
-const GET_PRODUCTS =gql`
+const GET_PRODUCTS = gql`
 query GetSingleProduct($id:Int){
     getSingleProduct(id:$id){
     id
@@ -15,9 +15,9 @@ query GetSingleProduct($id:Int){
 }
 `
 
- export const useProduct= (id:number)=>{
-    const {data,loading,error} = useQuery(GET_PRODUCTS,{variables:{id}})
+export const useProduct = (id: number) => {
+    const { data, loading, error } = useQuery(GET_PRODUCTS, { variables: { id } })
     return {
-        loading,error,data
+        loading, error, data
     }
 }

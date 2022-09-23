@@ -1,8 +1,8 @@
 const axios = require("axios")
-const { gql} = require("apollo-server-express")
+const {gql} = require("apollo-server-express")
 
 // Construct a schema, using GraphQL schema language
- const typeDefs = gql`
+const typeDefs = gql`
   type price {
     id: String
     price: String
@@ -30,11 +30,10 @@ const { gql} = require("apollo-server-express")
   }
 `
 
-
 // The root provides a resolver function for each API endpoint
 const base_url = "https://5fa0a1cfe21bab0016dfd30f.mockapi.io/products"
 
- const resolvers = {
+const resolvers = {
   Query: {
     getProducts: async (parent, args) => {
       const res = await axios.get(
@@ -51,9 +50,7 @@ const base_url = "https://5fa0a1cfe21bab0016dfd30f.mockapi.io/products"
     price: async (parent, arg, context) => {
       // Get the price for each product in the parent list
       const res = await axios
-        .get(
-          `${base_url}/${parent.id}/prices`
-        )
+        .get(`${base_url}/${parent.id}/prices`)
         .then(res => {
           return res.data[0]
         })
@@ -63,4 +60,4 @@ const base_url = "https://5fa0a1cfe21bab0016dfd30f.mockapi.io/products"
   },
 }
 
-module.exports={typeDefs,resolvers}
+module.exports = {typeDefs, resolvers}
