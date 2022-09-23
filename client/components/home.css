@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+.container {
+  background-color: #f4f4f4;
+}
+.header {
+  background-image: url("../assets/background.jpg");
+  background-position: 50%;
+  background-size: color;
+  background-repeat: no-repeat;
+  height: 50vh;
+  width: 100%;
+}
+
+.container .image {
+  max-width: 100%;
+}
+
+.container .sortContainer{
+  margin:1em 0;
+  display:flex;
+  gap:1em
+}
+.container .sortContainer input{
+  padding: 0 .5em ;
+  line-height: 2em;
+  margin-left: 5px;
+
+}
+.productOverview {
+  padding: 5em;
+  text-align: center;
+}
+.productOverview .product-overview {
+  margin-bottom: 1em;
+  font-size: 1.5em;
+}
+.container .products {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2em;
+}
+.container .products h3 {
+  text-align: center;
+}
+.container .product {
+  background-color: #fff;
+  padding: 2em;
+}
+.container .product .title {
+  font-size: 1.2em;
+  padding-top: 0.5em;
+}
+.container .product .price {
+  color: gray;
+  padding: 0.5em 0;
+}
+.container .product .title {
+  font-size: 15px;
+}
+.product .btn {
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  margin-top: 0.5em;
+  padding: 1em 0;
+}
+.buttonGroup button {
+  margin: 2em;
+  padding: 1em 2em;
+  border: none;
+  background: green;
+  color: white;
+}
+
+.buttonGroup .disabled {
+  color: gray;
+  background: none;
+}
+.custom-select select{
+  width:150px;
+ padding:  .5em ;
+  margin-left: 5px;
+}
+
+@media screen and (max-width:768px){
+  .container .products {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2em;
+}
+}
