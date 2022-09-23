@@ -14,9 +14,7 @@ const Products = () => {
   if (error) {
     return <h3>Error Occured...</h3>
   }
-  if (data) {
-    console.log(data.getSingleProduct)
-  }
+  
 
   const { title, description, image, price } = data?.getSingleProduct
   return (

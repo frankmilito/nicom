@@ -1,3 +1,25 @@
+##  FRONT END ASSESSMENT (A SIMPLE PRODUCT CATALOGUE)
+
+This project implements two screens using React JS To view List of products and Single product details with routes
+
+- /
+- /product/:id
+
+## Technologies
+
+A list of technologies used within the project:
+- React
+- Typescript
+- Graphql
+- Apollo-Client
+- React router dom
+
+## How to Run the project
+
+- git clone this repository
+- yarn
+- yarn start
+
 # Introduction
 
 Hey applicant!

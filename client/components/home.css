@@ -87,17 +87,15 @@
   margin-left: 5px;
 }
 
-@media screen and (min-width:768px){
+@media screen and (max-width:498px){
   .container .products {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr)!important;
-  gap: 2em;
+  grid-template-columns: repeat(1, 1fr)!important;
+  gap: 1em;
 }
 }
-@media screen and (min-width:368px){
+@media screen and (max-width:768px){
   .container .products {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr) !important;
+  grid-template-columns: repeat(4, 1fr) !important;
   gap: 2em;
 }
 }
